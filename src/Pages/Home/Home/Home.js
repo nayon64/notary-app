@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import ServiceCart from './ServiceCart';
 import {FaArrowRight} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -35,7 +36,7 @@ const Home = () => {
           <form>
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium text-lg">No of Extra Singnatures</h3>
+                <h3 className="font-medium">No of Extra Singnatures</h3>
                 <p className="text-xs">
                   please enter zero, if only one signature is required
                 </p>
@@ -48,7 +49,7 @@ const Home = () => {
 
             <div className="flex items-center justify-between mt-4 ">
               <div>
-                <h3 className="font-medium text-lg">
+                <h3 className="font-medium">
                   How Many Files will you be uploading in the sessioin
                 </h3>
               </div>
@@ -60,7 +61,7 @@ const Home = () => {
 
             <div className="flex items-center justify-between mt-4">
               <div>
-                <h3 className="font-medium text-lg">Number of Signers</h3>
+                <h3 className="font-medium">Number of Signers</h3>
               </div>
               <input
                 className="border-2 w-28 h-8 ml-3 rounded-sm px-1 text-sm"
@@ -70,7 +71,7 @@ const Home = () => {
 
             <div className="flex items-center justify-between mt-4">
               <div>
-                <h3 className="font-medium text-lg">Do you Need Witness?</h3>
+                <h3 className="font-medium">Do you Need Witness?</h3>
                 <p className="text-xs">
                   Do Not enter anything if you're bring your own Witness
                 </p>
@@ -87,9 +88,13 @@ const Home = () => {
           </h3>
         </div>
       </div>
-      <h3 className="flex items-center justify-end mt-4 cursor-pointer text-purple-800 font-bold">
-        <span className="mr-2">Next Step </span>
-        <FaArrowRight />
+
+      <h3 className="flex items-center justify-end mt-4  text-purple-800 font-bold">
+        <Link to="/details">
+          <span className="flex items-center cursor-pointer">
+            Next Step <FaArrowRight className="ml-2" />
+          </span>
+        </Link>
       </h3>
     </div>
   );
