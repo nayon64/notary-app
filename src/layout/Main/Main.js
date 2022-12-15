@@ -2,18 +2,24 @@ import React from "react";
 import { BsFillLightningFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaMapMarkerAlt, FaPhoneAlt, FaUserAlt } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
+import BackSpace from "../../Pages/Shared/BackSpace/BackSpace";
+import Step from "../../Pages/Shared/Stape/Stape";
 
 const Main = () => {
   return (
     <div className="drawer drawer-mobile rounded-2xl">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content p-8">
         <label
           htmlFor="my-drawer-2"
           className="btn btn-primary drawer-button lg:hidden"
         >
           Open drawer
         </label>
+        <BackSpace></BackSpace>
+        <Step></Step>
+        <Outlet></Outlet>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
