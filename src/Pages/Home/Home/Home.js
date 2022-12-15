@@ -20,7 +20,6 @@ const Home = () => {
 		return <h1>Loadding</h1>
 	}
 
-	console.log(services)
 	return (
     <div>
       <div className="grid md:grid-cols-2 gap-6 mt-6">

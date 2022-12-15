@@ -2,7 +2,6 @@ import React from 'react';
 import {FaArrowRight, FaStar} from "react-icons/fa";
 
 const ServiceCart = ({ service }) => {
-	console.log(service)
 	return (
     <div className="w-full border-2 rounded-lg p-3 flex justify-between gap-2">
       <div className='flex flex-col justify-between'>
